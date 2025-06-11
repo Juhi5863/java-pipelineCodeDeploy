@@ -22,15 +22,12 @@ phases:
     commands:
       - echo "WAR file built successfully"
       - ls -l target/*.war
-      - echo "=== Files to be included in artifact ==="
-      - find . -type f
 
 artifacts:
   files:
     - appspec.yml
     - scripts/**/*
-    - target/HelloWorld-0.0.1-SNAPSHOT.war
-  discard-paths: no
- 
+    - target/*.war
+  discard-paths: no  
   
   
